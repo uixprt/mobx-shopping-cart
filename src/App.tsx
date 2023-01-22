@@ -1,7 +1,7 @@
 import { Provider } from "mobx-react";
 import { useQuery } from "react-query";
 import { productsStore, Product } from "./store/ProductsStore";
-import { ProductList, CartList } from "./components";
+import { ProductList, CartList, Filters } from "./components";
 
 function App() {
   const { status, error } = useQuery<Product[], Error>("products", async () => {
@@ -16,6 +16,7 @@ function App() {
 
   return (
     <Provider productsStore={productsStore}>
+      <Filters />
       <ProductList />
       <CartList />
     </Provider>

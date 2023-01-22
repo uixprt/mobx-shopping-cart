@@ -3,11 +3,11 @@ import { observer } from "mobx-react";
 import { productsStore } from "../store/ProductsStore";
 
 export const ProductList: React.FC = observer(() => {
-  const { products, addToCart } = productsStore;
+  const { filteredProducts, addToCart } = productsStore;
 
   return (
     <div>
-      {products.map((product) => (
+      {filteredProducts.map((product) => (
         <ul key={product.id}>
           <li>
             {product.title}
