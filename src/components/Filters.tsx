@@ -1,5 +1,5 @@
 import { observer } from "mobx-react";
-import { productsStore as store } from "../store/ProductsStore";
+import { filtersStore as store } from "../store";
 
 export const Filters: React.FC = observer(() => {
   return (

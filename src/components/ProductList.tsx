@@ -1,9 +1,10 @@
 import React from "react";
 import { observer } from "mobx-react";
-import { productsStore } from "../store/ProductsStore";
+import { productsStore, cartStore } from "../store";
 
 export const ProductList: React.FC = observer(() => {
-  const { filteredProducts, addToCart } = productsStore;
+  const { filteredProducts } = productsStore;
+  const { addToCart } = cartStore;
 
   return (
     <div>
